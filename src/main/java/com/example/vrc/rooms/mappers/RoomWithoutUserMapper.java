@@ -1,0 +1,13 @@
+package com.example.vrc.rooms.mappers;
+
+import com.example.vrc.rooms.DTOs.RoomWithoutUserDTO;
+import com.example.vrc.rooms.models.RoomEntity;
+import org.mapstruct.*;
+
+import java.util.List;
+
+@Mapper(componentModel = "spring")
+public interface RoomWithoutUserMapper {
+    RoomWithoutUserDTO toDto(RoomEntity roomEntity);
+    List<RoomWithoutUserDTO> toDtoList(List<RoomEntity> rooms);
+}
